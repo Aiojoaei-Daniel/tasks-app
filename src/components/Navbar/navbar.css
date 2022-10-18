@@ -1,0 +1,37 @@
+ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  border-bottom: 2px solid gray;
+  padding-left: 20px;
+}
+
+ul > li {
+  list-style: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+li > a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-menu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.navbar-menu > p {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: black;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}

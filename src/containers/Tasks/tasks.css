@@ -1,0 +1,21 @@
+.tasks-page {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+  background-color: lightgray;
+}
+
+.tasks-container {
+  height: 85%;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid gray;
+  justify-content: space-around;
+}
+
+.filters-container {
+  height: 15%;
+  display: flex;
+  align-items: center;
+}
