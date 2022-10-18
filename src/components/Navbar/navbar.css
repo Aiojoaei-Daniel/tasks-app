@@ -18,7 +18,10 @@ ul > li {
 }
 
 li:hover {
-  background-color: rgb(167, 167, 167);
+  background-color: black;
+}
+li:hover > a {
+  color: white;
 }
 
 li > a {

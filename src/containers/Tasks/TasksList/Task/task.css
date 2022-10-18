@@ -3,8 +3,8 @@
   background-color: whitesmoke;
   padding: 10px;
   margin-bottom: 3px;
-  margin-left: 20px;
-  width: 773px;
+  margin-left: 22px;
+  width: 46.5rem;
 }
 .input-container {
   width: 33px;
@@ -20,6 +20,9 @@
   margin: 0px;
   height: 6rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .task-content > h1 {
@@ -27,7 +30,7 @@
 }
 
 .task-content > p {
-  width: 45rem;
+  width: 40rem;
   white-space: nowrap;
   max-height: 3rem;
   overflow: hidden;

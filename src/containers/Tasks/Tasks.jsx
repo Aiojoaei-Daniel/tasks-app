@@ -69,7 +69,7 @@ const Tasks = () => {
         <button>
           <i className="fas fa-sitemap"></i> Add to RFQ
         </button>
-        <button onClick={handleDelete}>
+        <button onClick={handleDelete} disabled={!selectItems}>
           <i className="fas fa-trash"></i> Delete Items
         </button>
       </div>

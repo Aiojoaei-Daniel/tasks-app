@@ -26,14 +26,14 @@ const SortBtns = () => {
       </div>
       <div className="third-filter">
         <button>
-          <i className="	fas fa-sort-up"></i>
+          <i className="fas fa-sort-up"></i>
         </button>
         <button>
           <i className="fas fa-list"></i>
           List
         </button>
         <button>
-          <i className="	fas fa-sort"></i>
+          <i className="fas fa-sort"></i>
         </button>
         <button>
           <i className="fas fa-laptop-code"></i>Timeline
@@ -41,8 +41,7 @@ const SortBtns = () => {
       </div>
       <div className="fourth-filter">
         <button>
-          <i className="fas fa-sitemap"></i>
-          View project tree
+          <i className="fas fa-sitemap"></i> View project tree
         </button>
       </div>
     </div>

@@ -32,7 +32,10 @@ const Task = ({ task, setSelectedTask, selectItems, setTasks }) => {
           {task.title} <span style={{ color: "gray" }}>#{task.id}</span>
         </h1>
         <p>{task.text}</p>
-        <p>details</p>
+        <p>
+          <i className="fas fa-calendar-alt"></i>{" "}
+          <b>Tuesday, October 18, 2022</b>
+        </p>
       </div>
     </div>
   );
