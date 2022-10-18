@@ -1,6 +1,6 @@
 .search-bar {
   display: flex;
-  width: 94%;
+  width: 50%;
   /* height: 50%; */
 }
 
@@ -23,7 +23,7 @@
 .search-input {
   margin-left: 20px;
   height: 3rem;
-  width: 50%;
+  width: 100%;
 
   border: none;
   font-size: 1rem;

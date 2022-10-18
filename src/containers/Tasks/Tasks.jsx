@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TasksList from "./TasksList/TasksList";
 import TaskDetails from "./TaskDetails/TaskDetails";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
+import SortBtns from "./SortBtns/SortBtns";
 import NotFound from "./../../components/NotFound/NotFound";
 
 import localTasks from "./../../tasks.json";
@@ -26,12 +27,27 @@ const Tasks = () => {
   const handleDelete = () => {
     const remainingTasks = tasks.filter((task) => !task.isSelected);
     setTasks(remainingTasks);
+
+    let selectedTaskAvailable = true;
+
+    for (let task of remainingTasks) {
+      if (task.id === selectedTask.id) {
+        selectedTaskAvailable = true;
+        break;
+      } else {
+        selectedTaskAvailable = false;
+      }
+    }
+    if (!selectedTaskAvailable) {
+      setSelectedTask({});
+    }
   };
 
   return (
     <div className="tasks-page">
       <div className="filters-container">
         <SearchBar setSearchValue={setSearchValue} />
+        <SortBtns />
       </div>
       <div className="tasks-container">
         {searchedTasks.length !== 0 ? (
@@ -47,8 +63,15 @@ const Tasks = () => {
         <TaskDetails selectedTask={selectedTask} />
       </div>
       <div className="select-items">
-        <button onClick={handleSelect}>Select Items</button>
-        <button onClick={handleDelete}>Delete Items</button>
+        <button onClick={handleSelect}>
+          <i className="fas fa-sitemap"></i> Select Items
+        </button>
+        <button>
+          <i className="fas fa-sitemap"></i> Add to RFQ
+        </button>
+        <button onClick={handleDelete}>
+          <i className="fas fa-trash"></i> Delete Items
+        </button>
       </div>
     </div>
   );
