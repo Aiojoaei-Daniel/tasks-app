@@ -1,5 +1,4 @@
 import React from "react";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -25,7 +24,6 @@ function App() {
         <div className="app-container">
           <Navbar />
           <Routes>
-            {/* <Route path="/sidebar" element={<Sidebar />} /> */}
             <Route path="/tasks" element={<Tasks />} />
             <Route path="/activity" element={<Activity />} />
             <Route path="/logs" element={<Logs />} />

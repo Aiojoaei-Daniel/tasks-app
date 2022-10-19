@@ -7,9 +7,8 @@ import "./tasksList.css";
 
 const TasksList = ({
   tasks,
-  setSelectedTask,
-  selectItems,
   setTasks,
+  selectItems,
   handleSelect,
   handleDelete,
 }) => {
@@ -20,7 +19,7 @@ const TasksList = ({
           <Task
             key={task.id}
             task={task}
-            setSelectedTask={setSelectedTask}
+            currentTasks={tasks}
             selectItems={selectItems}
             setTasks={setTasks}
           />

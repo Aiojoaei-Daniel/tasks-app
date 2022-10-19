@@ -1,18 +1,23 @@
 import React, { useState } from "react";
 import "./task.css";
 
-const Task = ({ task, setSelectedTask, selectItems, setTasks }) => {
-  const handleCheck = () => {
-    setTasks((currentTasks) =>
-      currentTasks.map((currentTask) => {
-        if (currentTask.id === task.id) {
-          return { ...task, isSelected: !task.isSelected };
-        } else {
-          return currentTask;
-        }
-      })
-    );
+const Task = ({ task, selectItems, setTasks, currentTasks }) => {
+  const handleSelect = (action) => {
+    const tasks = currentTasks.map((currentTask) => {
+      if (currentTask.id === task.id) {
+        return { ...task, [action]: !task[action] };
+      } else {
+        if (action === "isSelected")
+          return { ...currentTask, isSelected: false };
+
+        return currentTask;
+      }
+    });
+
+    setTasks(tasks);
   };
+
+  console.log(currentTasks);
 
   return (
     <div className="task">
@@ -20,10 +25,10 @@ const Task = ({ task, setSelectedTask, selectItems, setTasks }) => {
         <input
           type="checkbox"
           style={{ display: selectItems ? "inline" : "none" }}
-          onClick={handleCheck}
+          onClick={() => handleSelect("toBeDeleted")}
         />
       </div>
-      <div className="task-content" onClick={() => setSelectedTask(task)}>
+      <div className="task-content" onClick={() => handleSelect("isSelected")}>
         <h1>
           <i
             className="fas fa-clipboard-list"

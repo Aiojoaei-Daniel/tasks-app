@@ -4,7 +4,15 @@ import NotFound from "../../../components/NotFound/NotFound";
 
 import "./taskDetails.css";
 
-const TaskDetails = ({ selectedTask }) => {
+const TaskDetails = ({ tasks }) => {
+  let selectedTask = {};
+
+  tasks.forEach((task) => {
+    if (task.isSelected) {
+      selectedTask = { ...task };
+    }
+  });
+
   return Object.keys(selectedTask).length !== 0 ? (
     <div className="task-details">
       <h1>

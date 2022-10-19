@@ -12,7 +12,6 @@ import "./tasks.css";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState(localTasks);
-  const [selectedTask, setSelectedTask] = useState({});
   const [searchValue, setSearchValue] = useState("");
   const [selectItems, setSelectItems] = useState(false);
 
@@ -25,22 +24,9 @@ const Tasks = () => {
   };
 
   const handleDelete = () => {
-    const remainingTasks = tasks.filter((task) => !task.isSelected);
+    const remainingTasks = tasks.filter((task) => !task.toBeDeleted);
+
     setTasks(remainingTasks);
-
-    let selectedTaskAvailable = true;
-
-    for (let task of remainingTasks) {
-      if (task.id === selectedTask.id) {
-        selectedTaskAvailable = true;
-        break;
-      } else {
-        selectedTaskAvailable = false;
-      }
-    }
-    if (!selectedTaskAvailable) {
-      setSelectedTask({});
-    }
   };
 
   return (
@@ -58,16 +44,15 @@ const Tasks = () => {
         {searchedTasks.length !== 0 ? (
           <TasksList
             tasks={searchedTasks}
-            setSelectedTask={setSelectedTask}
-            selectItems={selectItems}
             setTasks={setTasks}
+            selectItems={selectItems}
             handleDelete={handleDelete}
             handleSelect={handleSelect}
           />
         ) : (
           <NotFound action={"found"} />
         )}
-        <TaskDetails selectedTask={selectedTask} />
+        <TaskDetails tasks={tasks} />
       </div>
     </div>
   );
