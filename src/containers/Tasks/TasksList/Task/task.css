@@ -2,12 +2,16 @@
   display: flex;
   background-color: whitesmoke;
   padding: 10px;
-  margin-bottom: 3px;
-  margin-left: 22px;
-  width: 46.5rem;
+  margin: 0;
+  border-bottom: 1px solid lightgray;
+  /* margin-bottom: 3px; */
+  /* max-width: 100%; */
 }
 .input-container {
-  width: 33px;
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .task > div > input {
@@ -17,7 +21,8 @@
 }
 
 .task-content {
-  margin: 0px;
+  width: 90%;
+  padding: 10px;
   height: 6rem;
   cursor: pointer;
   display: flex;
@@ -30,7 +35,7 @@
 }
 
 .task-content > p {
-  width: 40rem;
+  width: 35rem;
   white-space: nowrap;
   max-height: 3rem;
   overflow: hidden;

@@ -10,34 +10,24 @@
 .tasks-container {
   height: 85%;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header {
+  height: 15%;
+  padding-left: 10px;
+}
+
+.header > p {
+  margin-top: 10px;
+  height: 2rem;
 }
 
 .filters-container {
-  height: 15%;
+  height: 60%;
   display: flex;
   align-items: center;
-}
-
-.select-items {
-  width: 50%;
-  height: 5rem;
-  display: flex;
   justify-content: center;
-}
-
-.select-items > button {
-  border: 1px solid gray;
-  border-radius: 5px;
-  height: 2.5rem;
-  padding: 0 10px;
-  margin-left: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.select-items > button:hover {
-  background-color: black;
-  color: white;
+  border-bottom: 2px solid lightgray;
 }

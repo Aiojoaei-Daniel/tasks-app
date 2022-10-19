@@ -1,9 +1,8 @@
 .task-details {
-  width: 49%;
-  margin-left: 5px;
+  width: 95%;
   padding: 20px;
   padding-left: 30px;
-  background-color: rgb(215, 215, 215);
+  border-left: 1px solid lightgray;
 }
 
 .task-details > h1 {

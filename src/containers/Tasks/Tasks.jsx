@@ -45,9 +45,14 @@ const Tasks = () => {
 
   return (
     <div className="tasks-page">
-      <div className="filters-container">
-        <SearchBar setSearchValue={setSearchValue} />
-        <SortBtns />
+      <div className="header">
+        <p>
+          <b>LinkQuip</b> #NEXT -LPQ0922
+        </p>
+        <div className="filters-container">
+          <SearchBar setSearchValue={setSearchValue} />
+          <SortBtns />
+        </div>
       </div>
       <div className="tasks-container">
         {searchedTasks.length !== 0 ? (
@@ -56,22 +61,13 @@ const Tasks = () => {
             setSelectedTask={setSelectedTask}
             selectItems={selectItems}
             setTasks={setTasks}
+            handleDelete={handleDelete}
+            handleSelect={handleSelect}
           />
         ) : (
           <NotFound action={"found"} />
         )}
         <TaskDetails selectedTask={selectedTask} />
-      </div>
-      <div className="select-items">
-        <button onClick={handleSelect}>
-          <i className="fas fa-sitemap"></i> Select Items
-        </button>
-        <button>
-          <i className="fas fa-sitemap"></i> Add to RFQ
-        </button>
-        <button onClick={handleDelete} disabled={!selectItems}>
-          <i className="fas fa-trash"></i> Delete Items
-        </button>
       </div>
     </div>
   );

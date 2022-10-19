@@ -1,0 +1,64 @@
+.sidebar {
+  width: 15%;
+  background-color: rgb(217, 217, 217);
+
+  border-right: 1px solid rgb(193, 193, 193);
+}
+
+.home > input {
+  margin: 15px;
+  border: 0;
+  height: 1.8rem;
+  padding-left: 10px;
+}
+
+.sidebar > div > h1 > i {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+.sidebar > div > h1 {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  font-weight: 500;
+  height: 2rem;
+  width: 95%;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.sidebar > div > h1:hover {
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sidebar > div > p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  width: 100%;
+  height: 2rem;
+}
+
+.workspace {
+  border-top: 1px solid rgb(193, 193, 193);
+  height: 32%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.pinned,
+.recent {
+  border-top: 1px solid rgb(193, 193, 193);
+  height: 27%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.home > p {
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}

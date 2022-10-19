@@ -48,3 +48,13 @@ li > a {
   margin-bottom: 5px;
   border-radius: 5px;
 }
+
+ul > p:last-of-type {
+  margin-left: auto;
+  margin-right: 20px;
+  font-size: 1.2rem;
+}
+
+ul > p:last-of-type > i {
+  font-size: 1.6rem;
+}

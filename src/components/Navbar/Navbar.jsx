@@ -51,6 +51,10 @@ const Navbar = () => {
           PROJECT TREE
         </Link>
       </li>
+      <p>
+        <i className="fas fa-question-circle"></i> Daniel
+        <i className="glyphicon glyphicon-triangle-bottom"></i>
+      </p>
     </ul>
   );
 };

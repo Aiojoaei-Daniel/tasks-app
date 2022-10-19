@@ -29,8 +29,7 @@ const SortBtns = () => {
           <i className="fas fa-sort-up"></i>
         </button>
         <button>
-          <i className="fas fa-list"></i>
-          List
+          <i className="fas fa-list"></i> List
         </button>
         <button>
           <i className="fas fa-sort"></i>

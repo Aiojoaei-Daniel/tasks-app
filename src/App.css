@@ -7,4 +7,9 @@
 .App {
   height: 100vh;
   background-color: rgb(227, 227, 227);
+  display: flex;
+}
+
+.app-container {
+  width: 90%;
 }

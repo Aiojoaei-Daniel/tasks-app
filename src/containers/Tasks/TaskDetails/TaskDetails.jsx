@@ -12,6 +12,11 @@ const TaskDetails = ({ selectedTask }) => {
         <span style={{ color: "gray" }}>#{selectedTask.id}</span>
       </h1>
       <p>{selectedTask.text}</p>
+      {/* <div className="details">
+        <i className="fas fa-calendar-alt"></i> <p>Start Date </p>
+        <p className="time">{selectedTask.startDate}</p>
+        <p>End Date {selectedTask.endDate}</p>
+      </div> */}
     </div>
   ) : (
     <NotFound action={"selected"} />
